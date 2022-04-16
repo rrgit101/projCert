@@ -1,5 +1,5 @@
 #FROM devopsedu/webapp
-FROM rrgit101/projCert
+FROM rrgit101/projcert
 
 MAINTAINER Karina Hallberg <kamor23375923@gmail.com>
 
