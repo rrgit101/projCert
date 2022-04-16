@@ -15,15 +15,16 @@ RUN apt-get install -y php7.0 libapache2-mod-php7.0 php7.0-cli php7.0-common php
 RUN rm -rf /var/www/html/*
 RUN mkdir /var/www/html/template
 RUN mkdir /var/www/html/content
-COPY /var/lib/jenkins/jenkins_slave/workspace/Final_Project_Myproject1/website/config.php /var/www/html
-COPY /var/lib/jenkins/jenkins_slave/workspace/Final_Project_Myproject1/website/functions.php /var/www/html
-COPY /var/lib/jenkins/jenkins_slave/workspace/Final_Project_Myproject1/website/index.php /var/www/html
-COPY /var/lib/jenkins/jenkins_slave/workspace/Final_Project_Myproject1/website/template/template.php /var/www/html/template
-COPY /var/lib/jenkins/jenkins_slave/workspace/Final_Project_Myproject1/website/content/404.php  /var/www/html/content
-COPY /var/lib/jenkins/jenkins_slave/workspace/Final_Project_Myproject1/website/content/about-us.php  /var/www/html/content
-COPY /var/lib/jenkins/jenkins_slave/workspace/Final_Project_Myproject1/website/content/contact.php  /var/www/html/content
-COPY /var/lib/jenkins/jenkins_slave/workspace/Final_Project_Myproject1/website/content/home.php  /var/www/html/content
-COPY /var/lib/jenkins/jenkins_slave/workspace/Final_Project_Myproject1/website/content/products.php  /var/www/html/content
+RUN pwd
+COPY config.php /var/www/html
+COPY functions.php /var/www/html
+COPY index.php /var/www/html
+COPY template.php /var/www/html/template
+COPY content/404.php  /var/www/html/content
+COPY content/about-us.php  /var/www/html/content
+COPY contact.php  /var/www/html/content
+COPY content/home.php  /var/www/html/content
+COPY content/products.php  /var/www/html/content
 
 #Open port 80
 EXPOSE 80
