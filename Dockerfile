@@ -16,7 +16,7 @@ RUN rm -rf /var/www/html/*
 RUN mkdir /var/www/html/template
 RUN mkdir /var/www/html/content
 RUN cd /var/lib/jenkins/jenkins_slave/workspace/Final_Project_Myproject1/website/
-Run pwd
+RUN pwd
 COPY config.php /var/www/html
 COPY functions.php /var/www/html
 COPY index.php /var/www/html
