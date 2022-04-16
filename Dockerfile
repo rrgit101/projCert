@@ -15,7 +15,7 @@ RUN apt-get install -y php7.0 libapache2-mod-php7.0 php7.0-cli php7.0-common php
 RUN rm -rf /var/www/html/*
 RUN mkdir /var/www/html/template
 RUN mkdir /var/www/html/content
-WORKDIR cd /var/lib/jenkins/jenkins_slave/workspace/Final_Project_Myproject1/website/
+WORKDIR /var/lib/jenkins/jenkins_slave/workspace/Final_Project_Myproject1/website/
 RUN pwd
 COPY config.php /var/www/html
 COPY functions.php /var/www/html
